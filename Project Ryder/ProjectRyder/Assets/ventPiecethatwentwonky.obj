@@ -1,0 +1,24 @@
+# ProBuilder 4.4.0
+# https://unity3d.com/unity/features/worldbuilding/probuilder
+# 10/28/2020 5:35:41 PM
+
+mtllib ./ventPiecethatwentwonky.mtl
+o ventPiecethatwentwonky
+
+g ventPiecethatwentwonky
+v -11.3114 0.9989276 14.01102
+v -11.3114 0.04968369 14.01102
+v -10.3345 0.9989276 14.01102
+v -10.3345 0.04968369 14.01102
+
+vt 0.4928703 0.6028115
+vt 0.4928703 0.4910308
+vt 0.3778324 0.6028115
+vt 0.3778324 0.4910308
+
+vn 0 0 -1
+
+usemtl MAT_metal_01
+f 3/3/1 2/2/1 1/1/1
+f 3/3/1 4/4/1 2/2/1
+
