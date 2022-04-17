@@ -50,6 +50,9 @@ public class ContinuousMovement : MonoBehaviour
         if (isGrounded) fallingSpeed = 0;       //if so, we are not affected by gravity
         else fallingSpeed += gravity * Time.fixedDeltaTime;     //otherwise, you bet we fallin
 
+        if (character.height < 1) speed = 1;
+        else speed = 2;
+
         character.Move(Vector3.up * fallingSpeed * Time.fixedDeltaTime);    //add gravity to the move vector
     }
     #endregion

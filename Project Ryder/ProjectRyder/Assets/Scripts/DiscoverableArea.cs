@@ -19,6 +19,7 @@ public class DiscoverableArea : MonoBehaviour
     public bool gmCheck = false;
     public bool thirdFloorLightsOn = false;
     public AudioClip thirdFloorNoLightsClip;
+    public GameObject objectToAppear;
 
     #endregion
 
@@ -35,6 +36,8 @@ public class DiscoverableArea : MonoBehaviour
             //discoverable false means no more ability to discover since ya already did ya silly goose
             discoverable = false;
             PlayAudioClip();
+
+            if (objectToAppear) objectToAppear.SetActive(true);
         }    
     }
     private void Update()

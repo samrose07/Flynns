@@ -120,6 +120,9 @@ public class GameManager : MonoBehaviour
         SaveSystem.SavePlayer(this);
     }
 
+    //this switch case will handle loading of objects. When entering a new floor, it
+    //checks to make sure an object is not null and then sets it inactive if you're
+    //not on that floor. Really fixed some performance issues for me.
     public void ChangeFloorLoadedObjects(int floorNumber)
     {
         switch(floorNumber)
@@ -127,43 +130,44 @@ public class GameManager : MonoBehaviour
             case 1:
                 foreach(GameObject g in floorOneGOs)
                 {
-                    g.SetActive(true);
+                    if(g != null) g.SetActive(true);
+
                 }
                 foreach(GameObject g in floorTwoGOs)
                 {
-                    g.SetActive(false);
+                    if (g != null) g.SetActive(false);
                 }
                 foreach(GameObject g in floorThreeGOs)
                 {
-                    g.SetActive(false);
+                    if (g != null) g.SetActive(false);
                 }
                 break;
             case 2:
                 foreach (GameObject g in floorOneGOs)
                 {
-                    g.SetActive(false);
+                    if (g != null) g.SetActive(false);
                 }
                 foreach (GameObject g in floorTwoGOs)
                 {
-                    g.SetActive(true);
+                    if (g != null) g.SetActive(true);
                 }
                 foreach (GameObject g in floorThreeGOs)
                 {
-                    g.SetActive(false);
+                    if (g != null) g.SetActive(false);
                 }
                 break;
             case 3:
                 foreach (GameObject g in floorOneGOs)
                 {
-                    g.SetActive(false);
+                    if (g != null) g.SetActive(false);
                 }
                 foreach (GameObject g in floorTwoGOs)
                 {
-                    g.SetActive(false);
+                    if (g != null) g.SetActive(false);
                 }
                 foreach (GameObject g in floorThreeGOs)
                 {
-                    g.SetActive(true);
+                    if (g != null) g.SetActive(true);
                 }
                 break;
         }
